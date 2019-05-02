@@ -14,6 +14,17 @@ class QueryType extends ObjectType
         $config = [
             'name' => 'Query',
             'fields' => [
+                'message' => [
+                    'type' => Types::string(),
+                    'args' => [
+                        'name' => [
+                            'type' => Type::string()
+                        ]
+                    ],
+                    'resolve' => function($root, $args) {
+                        return "Hello " . $args['name'];
+                    }
+                ],
                 'speakers' => [
                     'type' => Types::listOf(Types::speaker()),
                     'description' => 'Returns speakers',
@@ -43,7 +54,7 @@ class QueryType extends ObjectType
                     'description' => 'Returns single conference',
                     'args' => [
                         'id' => [
-                            'type' => Type::int(),
+                            'type' => Type::nonNull(Type::int()),
                             'description' => 'ID of conference'
                         ]
                     ],
