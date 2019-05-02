@@ -49,8 +49,7 @@ try {
 
     // GraphQL schema to be passed to query executor:
     $schema = new Schema([
-        'query' => Types::query(),
-        'mutation' => Types::mutation()
+        'query' => Types::query()
     ]);
     $result = GraphQL::executeQuery(
         $schema,

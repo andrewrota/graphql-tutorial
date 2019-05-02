@@ -13,23 +13,11 @@ class MutationType extends ObjectType
         $config = [
             'name' => 'Mutation',
             'fields' => [
-                'addSpeaker' => [
-                    'type' => Types::listOf(Types::speaker()),
-                    'args' => [
-                        'name' => Type::nonNull(Type::string()),
-                        'twitter' => Type::string()
-                    ],
-                    'type' => new ObjectType([
-                        'name' => 'CreateSpeakerOutput',
-                        'fields' => [
-                            'id' => ['type' => Type::int()]
-                        ]
-                    ]),
-                    'description' => 'Adds a new conference',
-                    'resolve' => function($root, $args) {
-                        return DataSource::addSpeaker($args['name'], isset($args['twitter']) ? $args['twitter'] : null);
-                    }
-                ]
+                // #################################
+                // EXERCISE #13
+                // CREATE FIELD ON MUTATION TYPE
+                // TO ADD SPEAKER
+                // #################################
             ]
         ];
         parent::__construct($config);
