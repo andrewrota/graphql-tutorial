@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Type;
 
 use App\Data\AppContext;
@@ -17,14 +18,14 @@ class SpeakerType extends ObjectType
     {
         $config = [
             'name' => 'Speaker',
-            'fields' => function() {
+            'fields' => function () {
                 return [
                     'id' => Types::nonNull(Types::int()),
                     'name' => Types::string(),
                     'twitter' => Types::string()
                 ];
             },
-            'resolveField' => function($value, $args, $context, ResolveInfo $info) {
+            'resolveField' => function ($value, $args, $context, ResolveInfo $info) {
                 return $value->{$info->fieldName};
             }
         ];

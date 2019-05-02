@@ -72,14 +72,15 @@ class DataSource
     public static function bindParamArray($prefix, $values, &$bindArray)
     {
         $str = "";
-        foreach($values as $index => $value){
-            $str .= ":".$prefix.$index.",";
-            $bindArray[$prefix.$index] = $value;
+        foreach ($values as $index => $value) {
+            $str .= ":" . $prefix . $index . ",";
+            $bindArray[$prefix . $index] = $value;
         }
-        return rtrim($str,",");
+        return rtrim($str, ",");
     }
 
-    public static function selectSpeakers($id) {
+    public static function selectSpeakers($id)
+    {
         $query = 'SELECT
   speakers.id,
   speakers.name,
@@ -94,7 +95,8 @@ FROM
         return self::resultToArray($result);
     }
 
-    public static function addSpeaker($name, $twitter) {
+    public static function addSpeaker($name, $twitter)
+    {
         $statement = self::$db->prepare('INSERT INTO "speakers" ("name", "twitter") VALUES (:name, :twitter); ');
         $statement->bindValue(':name', $name);
         $statement->bindValue(':twitter', $twitter);

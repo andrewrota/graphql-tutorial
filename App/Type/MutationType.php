@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Type;
 
 use App\Data\DataSource;
@@ -26,7 +27,7 @@ class MutationType extends ObjectType
                         ]
                     ]),
                     'description' => 'Adds a new conference',
-                    'resolve' => function($root, $args) {
+                    'resolve' => function ($root, $args) {
                         return DataSource::addSpeaker($args['name'], isset($args['twitter']) ? $args['twitter'] : null);
                     }
                 ]

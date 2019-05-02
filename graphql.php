@@ -3,6 +3,7 @@
 // php -S localhost:8080 ./graphql.php
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/json_header.php';
+
 use \App\Data\DataSource;
 use \App\Types;
 use \GraphQL\Type\Schema;
@@ -15,15 +16,18 @@ ini_set('display_errors', 0);
 
 $debug = false;
 if (!empty($_GET['debug'])) {
-    set_error_handler(function($severity, $message, $file, $line) use (&$phpErrors) {
+    set_error_handler(function ($severity, $message, $file, $line) use (&$phpErrors) {
         throw new ErrorException($message, 0, $severity, $file, $line);
     });
     $debug = Debug::INCLUDE_DEBUG_MESSAGE | Debug::INCLUDE_TRACE;
 }
 
-class AppContext{
+class AppContext
+{
     public $user;
-};
+}
+
+;
 
 try {
     // Initialize our database connection
@@ -57,7 +61,7 @@ try {
         $data['query'],
         null,
         $appContext,
-        (array) $data['variables']
+        (array)$data['variables']
     );
     $output = $result->toArray($debug);
     $httpStatus = 200;

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Type;
 
 use App\Data\DataSource;
@@ -16,7 +17,7 @@ class QueryType extends ObjectType
                 'speakers' => [
                     'type' => Types::listOf(Types::speaker()),
                     'description' => 'Returns speakers',
-                    'resolve' => function() {
+                    'resolve' => function () {
                         return DataSource::getSpeakers();
                     }
                 ],
@@ -29,8 +30,8 @@ class QueryType extends ObjectType
                             'description' => 'Filter conferences by name (fuzzy search)'
                         ]
                     ],
-                    'resolve' => function($root, $args) {
-                        if(isset($args['nameFilter'])) {
+                    'resolve' => function ($root, $args) {
+                        if (isset($args['nameFilter'])) {
                             return DataSource::searchConferencesByName($args['nameFilter']);
                         } else {
                             return DataSource::getConferences();
@@ -46,7 +47,7 @@ class QueryType extends ObjectType
                             'description' => 'ID of conference'
                         ]
                     ],
-                    'resolve' => function($root, $args) {
+                    'resolve' => function ($root, $args) {
                         return DataSource::getConferenceByid($args['id']);
                     }
                 ],

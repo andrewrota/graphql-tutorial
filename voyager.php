@@ -8,6 +8,7 @@
             width: 100%;
             overflow: hidden;
         }
+
         #voyager {
             height: 100vh;
         }
@@ -22,7 +23,7 @@
       copy them directly into your environment, or perhaps include them in your
       favored resource bundler.
      -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css"/>
     <script src="https://cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js"></script>
 </head>
 <body>
@@ -53,6 +54,7 @@
             }
         });
     }
+
     // Render <Voyager /> into the body.
     GraphQLVoyager.init(document.getElementById('voyager'), {
         introspection: introspectionProvider
