@@ -1,0 +1,35 @@
+query getConfsSpeakres {
+    conferences {
+        name
+        speakers{
+            name
+        }
+    }
+}
+mutation a{
+    addSpeaker(
+        name: "Andrew Rota",
+        twitter: "https://twitter.com/andrewrota")
+    {
+        id
+    }
+}
+
+
+query allInfo{
+    conferences {
+        name
+        dates
+        location
+        url
+        speakers {
+            name
+            twitter
+        }
+    }
+    speakers {
+        name
+        id
+        twitter
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "install": "composer install && composer dump-autoload -o",
+  "start": "composer run start --timeout=0",
+  "watch": {
+    "ignore": [
+      "logs"
+    ]
+  }
+}

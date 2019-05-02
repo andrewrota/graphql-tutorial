@@ -1,0 +1,6 @@
+vendor/
+.idea
+graphql.config.json
+.DS_STORE
+node_modules
+.composer/
