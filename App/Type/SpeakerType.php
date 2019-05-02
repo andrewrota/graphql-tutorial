@@ -16,17 +16,11 @@ class SpeakerType extends ObjectType
     public function __construct()
     {
         $config = [
-            'name' => 'Speaker',
-            'fields' => function() {
-                return [
-                    'id' => Types::nonNull(Types::int()),
-                    'name' => Types::string(),
-                    'twitter' => Types::string()
-                ];
-            },
-            'resolveField' => function($value, $args, $context, ResolveInfo $info) {
-                return $value->{$info->fieldName};
-            }
+            // #################################
+            // EXERCISE #10
+            // ADD SPEAKER TYPE
+            // (REMEMBER NAME AND FIELDS)
+            // #################################
         ];
         parent::__construct($config);
     }

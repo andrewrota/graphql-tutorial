@@ -13,13 +13,6 @@ class QueryType extends ObjectType
         $config = [
             'name' => 'Query',
             'fields' => [
-                'speakers' => [
-                    'type' => Types::listOf(Types::speaker()),
-                    'description' => 'Returns speakers',
-                    'resolve' => function() {
-                        return DataSource::getSpeakers();
-                    }
-                ],
                 'conferences' => [
                     'type' => Types::listOf(Types::conference()),
                     'description' => 'List conferences',

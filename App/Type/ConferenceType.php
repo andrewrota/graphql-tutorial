@@ -33,13 +33,6 @@ class ConferenceType extends ObjectType
                     'description' => Types::string(),
                     'location' => Types::string(),
                     'dates' => Type::nonNull(Types::string()),
-                    'speakers' => [
-                        'type' => Types::listOf(Types::speaker()),
-                        'description' => 'List of speakers at this conference',
-                        'resolve' => function($root) {
-                           return DataSource::getSpeakersAtConference($root->id);
-                        }
-                    ]
                 ],
             'resolveField' => function($value, $args, $context, $info) {
                 return $value->{$info->fieldName};
