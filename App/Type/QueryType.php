@@ -14,6 +14,12 @@ class QueryType extends ObjectType
             'name' => 'Query',
             'fields' => [
                 // #################################
+                // EXERCISE #4
+                // ADD MESSAGE FIELD WHICH
+                // RETURNS A STRING
+                // #################################
+                //
+                // #################################
                 // EXERCISE #8
                 // ADD CONFERENCE FIELDS:
                 // 'conferences' and 'getConferenceById'
