@@ -7,6 +7,8 @@ namespace App\Data;
  *
  * SAMPLE DATA STORED IN SQLITE DB
  *
+ * No need to modify this class
+ *
  * @package App
  */
 class DataSource
