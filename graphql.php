@@ -21,17 +21,9 @@ if (!empty($_GET['debug'])) {
     $debug = Debug::INCLUDE_DEBUG_MESSAGE | Debug::INCLUDE_TRACE;
 }
 
-class AppContext{
-    public $user;
-};
-
 try {
     // Initialize our database connection
     DataSource::init();
-
-    // Prepare context that will be available in all field resolvers (as 3rd argument):
-    $appContext = new AppContext();
-    $appContext->user = 'foo';
 
     // Parse incoming query and variables
     if (isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
@@ -55,7 +47,7 @@ try {
         $schema,
         $data['query'],
         null,
-        $appContext,
+        null,
         (array) $data['variables']
     );
     $output = $result->toArray($debug);
