@@ -1,7 +1,6 @@
 {
     "require": {
-        "php": ">=7.0.00",
-        "webonyx/graphql-php": "^0.12.4"
+        "php": ">=7.0.00"
     },
     "autoload": {
         "psr-4": {
