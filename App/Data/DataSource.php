@@ -5,7 +5,7 @@ namespace App\Data;
 /**
  * Class DataSource
  *
- * In-memory data source
+ * SAMPLE DATA STORED IN SQLITE DB
  *
  * @package App
  */
