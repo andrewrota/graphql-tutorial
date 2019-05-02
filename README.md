@@ -2,6 +2,8 @@
 
 This is the example application for the [Build a GraphQL API with PHP tutorial](https://www.longhornphp.com/sessions/#build-a-graphql-api-with-php-tutorial) at the [Longhorn PHP 2019 Conference](https://www.longhornphp.com/).
 
+**SLIDES**: [http://bit.ly/longhornphp-graphql-slides](http://bit.ly/longhornphp-graphql-slides)
+
 ### Branches
 
 * `master` branch is meant to be the starting point for the tutorial, and so most functionality initially will not work.
