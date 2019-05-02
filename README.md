@@ -18,6 +18,41 @@ The objective of this tutorial is to build a simple GraphQL API that displays a 
 
 The eventual GraphQL schema will look like this:
 
+```graphql schema
+type Query {
+  message(name: String): String
+  speakers: [Speaker]
+  conferences(nameFilter: String): [Conference]
+  getConferenceById(id: Int): Conference
+}
+
+
+type Mutation {
+  addSpeaker(name: String!, twitter: String): CreateSpeakerOutput
+}
+
+type Conference {
+  id: Int!
+  name: String!
+  url: String!
+  description: String
+  location: String
+  dates: String!
+  speakers: [Speaker]
+}
+
+type Speaker {
+  id: Int!
+  name: String
+  twitter: String
+}
+
+type CreateSpeakerOutput {
+  id: Int
+}
+
+```
+
 ![GraphQL Schema](images/completed_schema.png "GraphQL Schema")
 
 The underlying data is stored in a sqlite databse (`phpconferences.sqlite`) and looks like this: 
