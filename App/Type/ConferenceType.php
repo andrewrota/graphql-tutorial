@@ -37,10 +37,7 @@ class ConferenceType extends ObjectType
                         'type' => Types::listOf(Types::speaker()),
                         'description' => 'List of speakers at this conference',
                         'resolve' => function($root) {
-                           SpeakerCollection::add($root->id);
-                            return new Deferred(function() use ($root) {
-                                return SpeakerCollection::get($root->id);
-                            });
+                           return DataSource::getSpeakersAtConference($root->id);
                         }
                     ]
                 ],
