@@ -15,17 +15,11 @@
     const Lokka = libs['lokka'].Lokka;
     const Transport = libs['lokka-transport-http'].Transport;
 
-    const client = new Lokka({
-        transport: new Transport('/graphql.php')
-    });
-    client.query(`{
-    conferences {
-      id
-      name
-    }
-  }`).then(response => {
-        console.log(response);
-    });
+    // #################################
+    // EXERCISE #14
+    // INITIALIZE LOKKA CLIENT
+    // AND CONSOLE LOG THE RESULT OF A QUERY
+    // #################################
 </script>
 
 </body>
