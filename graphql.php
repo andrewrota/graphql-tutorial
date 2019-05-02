@@ -12,7 +12,7 @@ use \GraphQL\Error\Debug;
 
 // Disable default PHP error reporting - we have better one for debug mode (see bellow)
 ini_set('display_errors', 0);
-
+$output = [];
 $debug = false;
 if (!empty($_GET['debug'])) {
     set_error_handler(function($severity, $message, $file, $line) use (&$phpErrors) {
