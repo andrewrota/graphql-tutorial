@@ -33,10 +33,7 @@ class ConferenceType extends ObjectType
                     'description' => Types::string(),
                     'location' => Types::string(),
                     'dates' => Type::nonNull(Types::string()),
-                ],
-            'resolveField' => function($value, $args, $context, $info) {
-                return $value->{$info->fieldName};
-            }
+                ]
         ];
         parent::__construct($config);
     }
