@@ -13,36 +13,11 @@ class QueryType extends ObjectType
         $config = [
             'name' => 'Query',
             'fields' => [
-                'conferences' => [
-                    'type' => Types::listOf(Types::conference()),
-                    'description' => 'List conferences',
-                    'args' => [
-                        'nameFilter' => [
-                            'type' => Type::string(),
-                            'description' => 'Filter conferences by name (fuzzy search)'
-                        ]
-                    ],
-                    'resolve' => function($root, $args) {
-                        if(isset($args['nameFilter'])) {
-                            return DataSource::searchConferencesByName($args['nameFilter']);
-                        } else {
-                            return DataSource::getConferences();
-                        }
-                    }
-                ],
-                'getConferenceById' => [
-                    'type' => Types::conference(),
-                    'description' => 'Returns single conference',
-                    'args' => [
-                        'id' => [
-                            'type' => Type::int(),
-                            'description' => 'ID of conference'
-                        ]
-                    ],
-                    'resolve' => function($root, $args) {
-                        return DataSource::getConferenceByid($args['id']);
-                    }
-                ],
+                // #################################
+                // EXERCISE #8
+                // ADD CONFERENCE FIELDS:
+                // 'conferences' and 'getConferenceById'
+                // #################################
             ]
         ];
         parent::__construct($config);
