@@ -39,23 +39,17 @@ try {
         $data['query'] = '{conferences {name}}';
     }
 
-    // GraphQL schema to be passed to query executor:
-    $schema = new Schema([
-        'query' => Types::query()
-    ]);
-    $result = GraphQL::executeQuery(
-        $schema,
-        $data['query'],
-        null,
-        null,
-        (array) $data['variables']
-    );
-    $output = $result->toArray($debug);
+
+    // #################################
+    // EXERCISE #5
+    // INITIALIZE SCHEMA INSTANCE WITH QUERY TYPE
+    // AND THEN EXECUTE THE QUERY AND SET THE RESULT
+    // TO $OUTPUT (WHICH IS RETURNED BELOW)
+    // #################################
+    //
+
     $httpStatus = 200;
 } catch (\Exception $error) {
     $httpStatus = 500;
-    $output['errors'] = [
-        FormattedError::createFromException($error, $debug)
-    ];
 }
 echo json_encode($output);
