@@ -25,15 +25,11 @@ class ConferenceType extends ObjectType
     public function __construct()
     {
         $config = [
-            'name' => 'Conference',
-            'fields' => [
-                    'id' => Type::nonNull(Types::int()),
-                    'name' => Type::nonNull(Types::string()),
-                    'url' => Type::nonNull(Types::string()),
-                    'description' => Types::string(),
-                    'location' => Types::string(),
-                    'dates' => Type::nonNull(Types::string()),
-                ]
+            // #################################
+            // EXERCISE #7
+            // ADD CONFERENCE TYPE:
+            // (DEFINE NAME AND FIELDS WITH TYPES)
+            // #################################
         ];
         parent::__construct($config);
     }

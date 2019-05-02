@@ -24,21 +24,10 @@ class Types
     private static $query;
     private static $mutation;
 
-    /**
-     * @return UserType
-     */
-    public static function conference()
-    {
-        return self::$conference ?: (self::$conference = new ConferenceType());
-    }
-
-    /**
-     * @return UserType
-     */
-    public static function speaker()
-    {
-        return self::$speaker ?: (self::$speaker = new SpeakerType());
-    }
+    // #################################
+    // EXERCISE #7
+    // ADD CONFERENCE TYPE TO REGISTRY
+    // #################################
 
     /**
      * @return QueryType
