@@ -2,10 +2,12 @@
 
 This is the example application for the [Build a GraphQL API with PHP tutorial](https://www.longhornphp.com/sessions/#build-a-graphql-api-with-php-tutorial) at the [Longhorn PHP 2019 Conference](https://www.longhornphp.com/).
 
-**Slides:** [bit.ly/longhornphp-graphql-slides](https://bit.ly/longhornphp-graphql-slides)
+**Slides:** [slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/](https://www.slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/)
+
 **Starting Code (Glitch):** [bit.ly/graphql-php-glitch](https://bit.ly/graphql-php-glitch)
 
 **Complete App:** [bit.ly/complete-graphql-php](https://bit.ly/complete-graphql-php) 
+
 **Complete Code (Glitch):** [bit.ly/complete-graphql-php-glitch](https://bit.ly/complete-graphql-php-glitch) 
 
 ### Branches
