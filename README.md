@@ -4,11 +4,9 @@ This is the example application for the Build a GraphQL API with PHP tutorial pr
 
 **Slides:** [slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/](https://www.slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/)
 
-**Starting Code (Glitch):** [bit.ly/graphql-php-glitch](https://bit.ly/graphql-php-glitch)
+**Starting Code (Glitch):** [bit.ly/graphql-code-glitch](bit.ly/graphql-code-glitch)
 
-**Complete App:** [bit.ly/complete-graphql-php](https://bit.ly/complete-graphql-php) 
-
-**Complete Code (Glitch):** [bit.ly/complete-graphql-php-glitch](https://bit.ly/complete-graphql-php-glitch) 
+**Complete App:** [bit.ly/complete-graphql-php-app](https://bit.ly/complete-graphql-php-app) 
 
 ### Branches
 
