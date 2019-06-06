@@ -1,6 +1,6 @@
-## LonghornPHP 2019 GraphQL Tutorial
+## GraphQL Tutorial (2019).
 
-This is the example application for the [Build a GraphQL API with PHP tutorial](https://www.longhornphp.com/sessions/#build-a-graphql-api-with-php-tutorial) at the [Longhorn PHP 2019 Conference](https://www.longhornphp.com/).
+This is the example application for the Build a GraphQL API with PHP tutorial presented at various conferences in 2019.
 
 **Slides:** [slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/](https://www.slideshare.net/andrewrota/tutorial-building-a-graphql-api-in-php/)
 
